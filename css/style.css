@@ -1,0 +1,395 @@
+body {
+  background-color: #0A090A;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  background-image: url("../img/main-bg.jpg");
+  /*чтобы браузер не поворял картинку*/
+  background-repeat: no-repeat;
+  /*стабилизируем картинку*/
+  background-position: top center;
+}
+.container {
+  /*максимальная ширинa*/
+  max-width: 1140px;
+  /*выравниваем по центру*/
+  margin: auto;
+}
+/*стили для шапки*/
+.header{
+  display: flex;
+  /*выравниваю по центру по вертикали*/
+  align-items: center;
+  justify-content: space-between;
+  /*внутрений отступ сверху*/
+  padding-top: 45px;
+  /*делаем отступ от строки поиска и название фильма. Делаем в процентах, чтобы смотрелось нормально на маленьких устройствах*/
+  margin-bottom: 30%;
+}
+.logo {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+}
+.search {
+  display: flex;
+  /*выравниваем кнопку по середине*/
+  align-items: center;
+  /*адаптируем картинку под маленькие устройства*/
+  flex: 0.8;
+}
+.search-input{
+  /*адаптируем под маленький формат*/
+  flex: 1;
+  /*фоновый цвет*/
+  background: rgba(196, 196, 196, 0.5);
+  /*уменьшаем фотографию*/
+  border-radius: 5px;
+  /*внутренний отступ сверху*/
+  padding-top: 12px;
+  /*внутренний отступ снизу*/
+  padding-bottom: 12px;
+  /*внутренний отступ по краям*/
+  padding-left: 18px;
+  padding-right: 18px;
+  /*убираем рамку*/
+  border: none;
+  /*меняем цвет внутри*/
+  color: #AEAEAE;
+  font-size: 14px;
+  line-height: 16px;
+}
+::-webkit-input-placeholder { /* Chrome */
+  color: #AEAEAE;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #AEAEAE;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #AEAEAE;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #AEAEAE;
+  opacity: 1;
+}
+.search-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 18px;
+}
+.user {
+  /*подстраиваем под формат*/
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  /*округляем фотографию*/
+  border-radius: 50%;
+  /*равномерно растянет фотографию*/
+  object-fit: cover;
+}
+
+.title {
+  /*Ставим оступ между заголовком1 и заголовком2*/
+  margin: 0;
+  /*Изминяем шрифт*/
+  font-family: 'Noto Serif', serif;
+  font-size: 48px;
+line-height: 64px;
+/*Cтавим отступ между з1 и з2 */
+margin-bottom: 7px;
+}
+/*меняем подзаголовок*/
+.title-en {
+  /*cтавим отступ между з2 и инфой*/
+  display: inline-block;
+  font-size: 20px;
+  line-height: 23px;
+  color: #787878;
+  /*ставим отступ между з2 и инфой*/
+  margin-bottom: 38px;
+}
+.info {
+  display: flex;
+  /*выравниваем кнопку подробней*/
+  align-items: center;
+  /*ставим кнопку подробней в конец экрана*/
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.movie-info {
+  display: flex;
+  align-items: center;
+}
+.tag {
+  /*изменяем инфо*/
+  display: inline-block;
+  /*кнопка фильм*/
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 5px 10px;
+  /*cтавим оступ кнопкой и сша/дата*/
+  margin-right: 20px;
+}
+.country {
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-right: 33px;
+}
+.play {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  /*Чтобы кнопка не была подчеркнута*/
+  text-decoration: none;
+}
+/*ставим кнопку play возле ссылки на трейлер*/
+.play::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/play.svg);
+  background-repeat: no-repeat;
+  /*чтобы кнопка стояла равномерно*/
+  background-size: 100%;
+  margin-right: 15px;
+}
+.more {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  /*Чтобы кнопка не была подчеркнута*/
+  text-decoration: none;
+}
+.more:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/play.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 15px;
+  /*переворачиваем изображение на 90 градусов*/
+  transform: rotate(90deg);
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 3px;
+  color: #000000;
+  /*отступ сверху и по краям*/
+  padding: 3% 4%;
+}
+.short-info {
+  margin-right: 3%;
+}
+
+.poster {
+  display: block;
+  /*Чтобы постер выеехал вверх margin-top: -60px;*/
+  margin-bottom: 20px;
+}
+.button {
+  background: #FF8F27;
+  padding: 10px 45.2px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+}
+.actors-title {
+/*внутрений оступ*/
+  padding-left: 15px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000000;
+  /*отступ*/
+  margin-bottom: 10px;
+}
+.actors-list {
+  margin: 0;
+  /*отклучить стили*/
+  list-style: none;
+  padding-left: 15px;
+  /*Чтобы были подчеркнуты*/
+  text-decoration: underline;
+  line-height: 150%;
+}
+.full-info {
+ flex: 0.96;
+}
+.full-content {
+  display: flex;
+  /*между контентом ставим отсутп*/
+  justify-content: space-between;
+}
+.tabs-content {
+  display: none;
+  margin-right: 70px;
+}
+.visible {
+  display: block;
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%;
+}
+.tabs-item {
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
+}
+/*ставим икнонку вкладки*/
+/*задай оступ всем, но не последнему*/
+.tabs-item:not(:last-child) {
+  margin-right: 4%;
+}
+.tabs-item img {
+  vertical-align: middle;
+}
+.tabs-item-active {
+  color: #FF8F27;
+}
+.text {
+  font-size: 16px;
+  line-height: 140%;
+  margin-top: 0;
+}
+.subscribe-title {
+  font-weight: 900;
+  font-size: 15.8px;
+  line-height: 150%;
+  color: #000000;
+  margin-bottom: 14px;
+  margin-top: 0;
+}
+.subscribe-form {
+  display: flex;
+  margin-bottom: 48px;
+}
+.subscribe-input {
+  background: rgba(230, 230, 230, 0.753);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-bottom: 0px;
+  padding-top: 5;
+  color: #aeaeae;
+  font-size: 12.2px;
+  line-height: 10px;
+}
+.subscribe-button {
+  background: #FF8F27;
+  /*скругление*/
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  padding: 12px;
+}
+
+/*адаптируем под устройство*/
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .tabs-item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 740px;
+  }
+  .tabs {
+    flex-wrap: wrap;
+  }
+  .tabs-item {
+    flex-basis: 20%;
+    line-height: 2;
+  }
+  .full-content {
+    flex-wrap: wrap;
+  }
+  .tabs-content {
+    margin-bottom: 5%;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .actors-list {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .more {
+    display: none;
+  }
+  .tabs-item {
+    flex-basis: 34%;
+  }
+  .tabs-content {
+    margin-right: 0;
+  }
+}
+@media(max-width: 578px) {
+  .container {
+    width: 90%;
+  }
+  .header{
+    flex-wrap: wrap;
+  }
+  .search {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 5%;
+  }
+  .content {
+    flex-wrap: wrap;
+  }
+  .short-info {
+    margin-bottom: 5%;
+  }
+  .actors-list, .actors-title {
+    display: none;
+  }
+  .movie-info {
+    flex-wrap: wrap;
+  }
+  .play {
+    flex-basis: 100%;
+    margin-top: 10%;
+  }
+  .short-info {
+    margin-right: 0;
+  }
+  .button{
+    width: 100%;
+  }
+  .poster {
+    display: inline-block;
+    width: 100%;
+  }
+}
+  
